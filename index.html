@@ -1269,5 +1269,32 @@
     <script src="js/custom.js"></script>
   </body>
 
+
+
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("se2AL1s8XuhfpduDe"); // Public Key
+
+    const form = document.querySelector('form[name="contact"]');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Netlify default submit थांबवा
+
+      emailjs.sendForm('service_n8bnbi9', 'template_p489v9q', this)
+        .then((response) => alert('Email यशस्वीपणे पाठवला! ✅ Response: ' + JSON.stringify(response)))
+        .catch((err) => alert('Email पाठवण्यात त्रुटी ❌: ' + JSON.stringify(err)));
+    });
+  })();
+</script>
+
+
+
 <!-- Mirrored from slimhamdi.net/tunis/demos/light.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Dec 2025 05:37:12 GMT -->
 </html>
