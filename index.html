@@ -1047,31 +1047,35 @@
                 <!-- Left Side Ends -->
                 <!-- Contact Form Starts -->
                 <div class="col-12 col-lg-8">
-                  <form class="contactform" method="post" action="https://slimhamdi.net/tunis/demos/php/process-form.php">
-                    <div class="contactform">
-                      <div class="row">
-                        <div class="col-12 col-md-4">
-                          <input autocomplete="off" type="text" name="name" placeholder="YOUR NAME">
-                        </div>
-                        <div class="col-12 col-md-4">
-                          <input autocomplete="off" type="email" name="email" placeholder="YOUR EMAIL">
-                        </div>
-                        <div class="col-12 col-md-4">
-                          <input autocomplete="off" type="text" name="subject" placeholder="YOUR SUBJECT">
-                        </div>
-                        <div class="col-12">
-                          <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
-                          <button type="submit" class="button">
-                            <span class="button-text">Send Message</span>
-                            <span class="button-icon fa fa-send"></span>
-                          </button>
-                        </div>
-                        <div class="col-12 form-message">
-                          <span class="output_message text-center font-weight-600 text-uppercase"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+                 <form class="contactform" name="contact" method="POST" data-netlify="true">
+  <!-- Hidden input for Netlify -->
+  <input type="hidden" name="form-name" value="contact">
+
+  <div class="contactform">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <input autocomplete="off" type="text" name="name" placeholder="YOUR NAME">
+      </div>
+      <div class="col-12 col-md-4">
+        <input autocomplete="off" type="email" name="email" placeholder="YOUR EMAIL">
+      </div>
+      <div class="col-12 col-md-4">
+        <input autocomplete="off" type="text" name="subject" placeholder="YOUR SUBJECT">
+      </div>
+      <div class="col-12">
+        <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+        <button type="submit" class="button">
+          <span class="button-text">Send Message</span>
+          <span class="button-icon fa fa-send"></span>
+        </button>
+      </div>
+      <div class="col-12 form-message">
+        <span class="output_message text-center font-weight-600 text-uppercase"></span>
+      </div>
+    </div>
+  </div>
+</form>
+
                 </div>
                 <!-- Contact Form Ends -->
               </div>
