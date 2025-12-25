@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>umesh pandhare - Personal Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="img/light.jpg">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Template Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -312,7 +314,7 @@
                       </ul>
                     </div>
                     <div class="col-12 mt-3">
-                      <a class="button" href="pdf/umesh.pdf">
+                      <a class="button" href="pdf/umesh.pdf" target="_blank">
                         <span class="button-text">Download CV</span>
                         <span class="button-icon fa fa-download"></span>
                       </a>
@@ -1110,7 +1112,7 @@
                     <div class="post-content">
                       <div class="entry-header">
                         <h3>
-                          <a href="blog-post-light.html">How to Own Your Audience by Creating an Email List</a>
+                          <a href="blog.html?id=3">uk How to Own Your Audience by Creating an Email List</a>
                         </h3>
                       </div>
                       <div class="entry-content open-sans-font">
@@ -1285,16 +1287,15 @@
 
     const form = document.querySelector('form[name="contact"]');
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Netlify default submit थांबवा
+    event.preventDefault(); // Netlify default submit थांबवा
 
       emailjs.sendForm('service_n8bnbi9', 'template_p489v9q', this)
-        .then((response) => alert('Email यशस्वीपणे पाठवला! ✅ Response: ' + JSON.stringify(response)))
-        .catch((err) => alert('Email पाठवण्यात त्रुटी ❌: ' + JSON.stringify(err)));
+        .then((response) => alert('Data send successfully' + JSON.stringify(response)))
+        .catch((err) => alert('Data can not send: ' + JSON.stringify(err)));
     });
   })();
 </script>
 
 
 
-<!-- Mirrored from slimhamdi.net/tunis/demos/light.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Dec 2025 05:37:12 GMT -->
 </html>
